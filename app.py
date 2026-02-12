@@ -3,6 +3,7 @@
 import csv
 import io
 import json
+import re
 import sys
 import os
 import time
@@ -24,6 +25,24 @@ from src.parser import (
 
 MAX_PAGES_PER_CATEGORY = 20
 
+# Regex patterns for Google Maps URLs:
+#   https://www.google.com/maps/@19.033,73.029,15z
+#   https://www.google.com/maps/place/.../@19.033,73.029,15z/...
+#   https://maps.google.com/?q=19.033,73.029
+#   https://www.google.com/maps?ll=19.033,73.029
+_GMAPS_AT_RE = re.compile(r"@(-?\d+\.?\d*),(-?\d+\.?\d*)")
+_GMAPS_Q_RE = re.compile(r"[?&]q=(-?\d+\.?\d*),(-?\d+\.?\d*)")
+_GMAPS_LL_RE = re.compile(r"[?&]ll=(-?\d+\.?\d*),(-?\d+\.?\d*)")
+
+
+def _parse_gmaps_url(url: str) -> tuple[float, float] | None:
+    """Extract lat/lon from a Google Maps URL. Returns None on failure."""
+    for pattern in (_GMAPS_AT_RE, _GMAPS_Q_RE, _GMAPS_LL_RE):
+        m = pattern.search(url)
+        if m:
+            return float(m.group(1)), float(m.group(2))
+    return None
+
 st.set_page_config(page_title="Blinkit Scraper", page_icon="🛒", layout="wide")
 st.title("🛒 Blinkit Product Scraper")
 
@@ -31,15 +50,24 @@ st.title("🛒 Blinkit Product Scraper")
 
 with st.sidebar:
     st.header("Location")
-    loc_mode = st.radio("Resolve by", ["Lat / Lon", "Pincode"], horizontal=True)
+    loc_mode = st.radio(
+        "Resolve by", ["Google Maps Link", "Lat / Lon", "Pincode"], horizontal=True,
+    )
 
-    if loc_mode == "Lat / Lon":
-        pincode = None
+    pincode = None
+    input_lat = input_lon = None
+    gmaps_url = None
+
+    if loc_mode == "Google Maps Link":
+        gmaps_url = st.text_input(
+            "Google Maps URL",
+            placeholder="https://www.google.com/maps/@19.033,73.029,15z",
+        )
+    elif loc_mode == "Lat / Lon":
         input_lat = st.number_input("Latitude", value=19.0330, format="%.4f")
         input_lon = st.number_input("Longitude", value=73.0297, format="%.4f")
     else:
         pincode = st.text_input("Pincode", value="400706", max_chars=6)
-        input_lat = input_lon = None
 
     st.divider()
     st.header("Categories")
@@ -67,7 +95,14 @@ with st.sidebar:
 if run_clicked:
     # Resolve location
     try:
-        if pincode:
+        if gmaps_url:
+            result = _parse_gmaps_url(gmaps_url)
+            if result is None:
+                st.error("Could not extract coordinates from that Google Maps URL.")
+                st.stop()
+            lat, lon = result
+            st.info(f"Google Maps link resolved to ({lat:.4f}, {lon:.4f})")
+        elif pincode:
             lat, lon = resolve_pincode(pincode)
             st.info(f"Pincode {pincode} resolved to ({lat:.4f}, {lon:.4f})")
         else:
