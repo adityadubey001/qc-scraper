@@ -5,6 +5,6 @@ geopy>=2.4.0
 fake-useragent>=1.4.0
 tenacity>=8.2.0
 tqdm>=4.66.0
-playwright>=1.40.0
+# playwright>=1.40.0  # only needed for Swiggy CLI scraper (not Streamlit app)
 streamlit>=1.30.0
 pandas>=2.0.0
