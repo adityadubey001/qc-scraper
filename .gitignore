@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Scraped output files (large, regenerated)
+blinkit_products.csv
+blinkit_full_scrape.csv
+
+# Environment
+.env
+.venv/
+venv/

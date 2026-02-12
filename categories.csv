@@ -1,0 +1,115 @@
+l1_name,l1_id,l2_name,l2_id,slug
+Vegetables & Fruits,1487,Fresh Vegetables,1489,fresh-vegetables
+Vegetables & Fruits,1487,Fresh Fruits,1503,fresh-fruits
+Vegetables & Fruits,1487,Freshly Cut & Sprouts,395,freshly-cut-sprouts
+Vegetables & Fruits,1487,Exotic Fruits & Veggies,222,exotic-fruits-veggies
+Vegetables & Fruits,1487,Fresh Juice & Dips,1941,fresh-juice-dips
+Vegetables & Fruits,1487,All Fruits & Vegetables,3989,all-fruits-vegetables
+Dairy Bread & Eggs,14,Milk,922,milk
+Dairy Bread & Eggs,14,Bread & Pav,953,bread-pav
+Dairy Bread & Eggs,14,Eggs,1200,eggs
+Dairy Bread & Eggs,14,Cheese,33,cheese
+Dairy Bread & Eggs,14,Butter & More,952,butter-more
+Dairy Bread & Eggs,14,Paneer & Tofu,923,paneer-tofu
+Dairy Bread & Eggs,14,Curd & Yogurt,123,curd-yogurt
+Dairy Bread & Eggs,14,Cream & Condensed Milk,130,condensed-milk
+Dairy Bread & Eggs,14,Milk Drinks,1184,milk-drinks
+Dairy Bread & Eggs,14,Ghee,69,ghee
+Dairy Bread & Eggs,14,Breakfast Mixes,1612,breakfast-mixes
+Dairy Bread & Eggs,14,Poha,1288,poha
+Dairy Bread & Eggs,14,Kids Cereals,1739,kids-cereals
+Munchies,1237,Chips & Crisps,940,chips-crisps
+Munchies,1237,Bhujia & Mixtures,1178,bhujia-mixtures
+Cold Drinks & Juices,332,Soft Drinks,1102,soft-drinks
+Cold Drinks & Juices,332,Fruit Juices,955,fruit-juices
+Cold Drinks & Juices,332,Mineral Water,22,mineral-water
+Cold Drinks & Juices,332,Water & Ice Cubes,270,water-ice-cubes
+Cold Drinks & Juices,332,Energy Drinks,19,energy-drinks
+Cold Drinks & Juices,332,Soda,1600,soda
+Cold Drinks & Juices,332,Coconut Water,1594,coconut-water
+Cold Drinks & Juices,332,Cold Drink in a Can,1107,cold-drink-in-a-can
+Cold Drinks & Juices,332,Cold Drink in Bottles,23,cold-drink-in-bottles
+Cold Drinks & Juices,332,Cold Coffee,412,cold-coffee
+Cold Drinks & Juices,332,Iced Tea,93,iced-tea
+Cold Drinks & Juices,332,Flavored Milk,36,flavored-milk
+Cold Drinks & Juices,332,Coldpress,91,coldpress
+Cold Drinks & Juices,332,Lassi,1093,lassi
+Cold Drinks & Juices,332,Beverages Gift Packs,1323,beverages-gift-packs
+Instant & Frozen Food,15,Noodles,962,noodles
+Instant & Frozen Food,15,Ready to Cook & Eat,1294,ready-to-cook-eat
+Instant & Frozen Food,15,Frozen Veg Snacks,1413,frozen-veg-snacks
+Instant & Frozen Food,15,Frozen Non-Veg Snacks,1412,frozen-non-veg-snacks
+Instant & Frozen Food,15,Instant Mixes,965,instant-mixes
+Tea Coffee & Health Drinks,12,Leaf & Dust Tea,25,leaf-dust-tea
+Tea Coffee & Health Drinks,12,Exotic & Flavoured Tea,1562,exotic-flavoured-tea
+Tea Coffee & Health Drinks,12,Cold Coffee & Ice Tea,1953,cold-coffee-ice-tea
+Tea Coffee & Health Drinks,12,Health Drinks & Supplements,21,health-drinks-supplements
+Tea Coffee & Health Drinks,12,Chocolate Health Drinks,1106,chocolate-health-drinks
+Bakery & Biscuits,888,Cream Biscuits,105,cream-biscuits
+Bakery & Biscuits,888,Healthy & Digestive,938,healthy-digestive
+Bakery & Biscuits,888,Baking Ingredients & Mixes,971,baking-ingredients-mixes
+Sweet Tooth,9,Ice Cream & Frozen Dessert,183,ice-cream-frozen-dessert
+Sweet Tooth,9,Chocolates,944,chocolates
+Sweet Tooth,9,Candies & Gum,1930,candies-gum
+Sweet Tooth,9,Indian Sweets,943,indian-sweets
+Sweet Tooth,9,Mouth Fresheners,1933,mouth-fresheners
+Sweet Tooth,9,Chocolate Gift Pack,2379,chocolate-gift-pack
+Atta Rice & Dal,16,Atta,1165,atta
+Atta Rice & Dal,16,Rice,1161,rice
+Atta Rice & Dal,16,Basmati Rice,1164,basmati-rice
+Atta Rice & Dal,16,Toor Urad & Chana,1010,toor-urad-chana
+Atta Rice & Dal,16,Moong & Masoor,505,moong-masoor
+Atta Rice & Dal,16,Chana,1702,chana
+Masala Oil & More,1557,Oil,917,oil
+Masala Oil & More,1557,Ghee & Vanaspati,1158,ghee-vanaspati
+Masala Oil & More,1557,Whole Spices,930,whole-spices
+Masala Oil & More,1557,Powdered Spices,50,powdered-spices
+Masala Oil & More,1557,Salt Sugar & Jaggery,933,salt-sugar-jaggery
+Masala Oil & More,1557,Dry Fruits,1160,dry-fruits
+Masala Oil & More,1557,Dry Fruit Gift Packs,1602,dry-fruit-gift-packs
+Sauces & Spreads,972,Indian Chutney & Pickle,1126,indian-chutney-pickle
+Sauces & Spreads,972,Cooking Sauces & Vinegar,929,cooking-sauces-vinegar
+Sauces & Spreads,972,Table Sauces,1132,table-sauces
+Sauces & Spreads,972,Asian Sauces,1045,asian-sauces
+Chicken Meat & Fish,4,Chicken,1362,chicken
+Chicken Meat & Fish,4,Fresh Meat,1201,fresh-meat
+Chicken Meat & Fish,4,Red Meat,1363,red-meat
+Chicken Meat & Fish,4,Frozen Non-Veg Snacks,1412,frozen-non-veg-snacks
+Paan Corner,229,Chocolates & Candies,1044,chocolates-candies
+Pharma & Wellness,287,Everyday Medicines,289,everyday-medicines
+Pharma & Wellness,287,Feminine Care,723,feminine-care
+Pharma & Wellness,287,Adult Diapers,629,adult-diapers
+Pharma & Wellness,287,Sexual Wellness,741,sexual-wellness
+Baby Care,7,Diapers & More,1000,diapers-more
+Baby Care,7,Baby Wipes,996,baby-wipes
+Baby Care,7,Baby Food,1590,baby-food
+Baby Care,343,Health & Safety,997,health-safety
+Cleaning Essentials,18,Detergent Powder & Bars,983,detergent-powder-bars
+Cleaning Essentials,18,Liquid Detergents,3882,liquid-detergents
+Cleaning Essentials,18,Dishwashing Gels & Powder,1078,dishwashing-gels-powder
+Cleaning Essentials,18,Dishwashing Accessories,986,dishwashing-accessories
+Cleaning Essentials,18,Floor & Surface Cleaners,51,floor-cleaners-more
+Cleaning Essentials,18,Toilet & Bathroom Cleaners,987,toilet-cleaners-more
+Cleaning Essentials,18,Kitchen Cleaners,4647,kitchen-cleaners
+Cleaning Essentials,18,Fresheners,1085,fresheners
+Cleaning Essentials,18,Disinfectants,1784,disinfectant-more
+Cleaning Essentials,18,Cleaning Tools,1082,cleaning-tools
+Cleaning Essentials,18,Antiseptic Liquid,1121,antiseptic-liquid
+Cleaning Essentials,18,Fabric Conditioner & Additives,985,fabric-conditioner-additives
+Home & Office,1379,Tissues & Disposables,1075,tissues-disposables
+Home & Office,1379,Garbage Bags,1833,garbage-bags
+Home & Office,1379,Pooja Needs,1048,pooja-needs
+Beauty & Hygiene,163,Bathing Soaps,696,bathing-soaps
+Beauty & Hygiene,163,Face & Body Moisturizers,690,face-body-moisturizers
+Beauty & Hygiene,163,Shampoo & Conditioner,166,shampoo-conditioner
+Beauty & Hygiene,163,Oral Care,722,oral-care
+Beauty & Hygiene,163,Bath & Beauty Gifts,710,bath-beauty-gifts
+Beauty & Hygiene,163,Deodorants & Powders,1115,deodorants-powders
+Skin & Hair Care,13,Face Cream & Gel,164,face-cream-gel
+Skin & Hair Care,13,Shampoo,223,shampoo
+Skin & Hair Care,13,Women Razors & Trimmers,339,womens-razors-trimmers
+Skin & Hair Care,13,Shower Gels & Scrubs,981,shower-gels-scrubs
+Pet Care,5,Dog Food & Treats,133,dog-food-treats
+Pet Care,5,Cat Treats,291,cat-treats
+Pet Care,5,Pet Grooming & Accessories,403,pet-grooming-accessories
+Pet Care,5,Pet Health & Supplements,992,pet-health-supplements

@@ -1,0 +1,53 @@
+{
+  "props": {
+    "pageProps": {
+      "products": [
+        {
+          "variant_id": 10001,
+          "variant_name": "Amul Taaza Toned Fresh Milk 500 ml",
+          "product_id": 5001,
+          "group_id": 3001,
+          "store_id": 701,
+          "selling_price": 27.0,
+          "mrp": 29.0,
+          "in_stock": true,
+          "inventory": 50,
+          "is_sponsored": 0,
+          "image_url": "https://cdn.blinkit.com/milk_500ml.jpg",
+          "brand_id": 201,
+          "brand": "Amul"
+        },
+        {
+          "variant_id": 10002,
+          "variant_name": "Mother Dairy Full Cream Milk 1 L",
+          "product_id": 5002,
+          "group_id": 3002,
+          "store_id": 701,
+          "selling_price": 66.0,
+          "mrp": 68.0,
+          "in_stock": true,
+          "inventory": 30,
+          "is_sponsored": 0,
+          "image_url": "https://cdn.blinkit.com/milk_1l.jpg",
+          "brand_id": 202,
+          "brand": "Mother Dairy"
+        },
+        {
+          "variant_id": 10003,
+          "variant_name": "Britannia 50-50 Sweet & Salty Biscuits 150 g",
+          "product_id": 5003,
+          "group_id": 3003,
+          "store_id": 701,
+          "selling_price": 20.0,
+          "mrp": 20.0,
+          "in_stock": false,
+          "inventory": 0,
+          "is_sponsored": 1,
+          "image_url": "https://cdn.blinkit.com/biscuit_150g.jpg",
+          "brand_id": 203,
+          "brand": "Britannia"
+        }
+      ]
+    }
+  }
+}
