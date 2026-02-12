@@ -31,15 +31,15 @@ st.title("🛒 Blinkit Product Scraper")
 
 with st.sidebar:
     st.header("Location")
-    loc_mode = st.radio("Resolve by", ["Pincode", "Lat / Lon"], horizontal=True)
+    loc_mode = st.radio("Resolve by", ["Lat / Lon", "Pincode"], horizontal=True)
 
-    if loc_mode == "Pincode":
-        pincode = st.text_input("Pincode", value="400706", max_chars=6)
-        input_lat = input_lon = None
-    else:
+    if loc_mode == "Lat / Lon":
         pincode = None
         input_lat = st.number_input("Latitude", value=19.0330, format="%.4f")
         input_lon = st.number_input("Longitude", value=73.0297, format="%.4f")
+    else:
+        pincode = st.text_input("Pincode", value="400706", max_chars=6)
+        input_lat = input_lon = None
 
     st.divider()
     st.header("Categories")
@@ -58,7 +58,7 @@ with st.sidebar:
 
     st.divider()
     st.header("Settings")
-    delay = st.slider("Delay between requests (s)", 1.0, 10.0, DEFAULT_DELAY, 0.5)
+    delay = st.slider("Delay between requests (s)", 1.0, 10.0, 5.0, 0.5)
 
     run_clicked = st.button("Run Scrape", type="primary", use_container_width=True)
 
