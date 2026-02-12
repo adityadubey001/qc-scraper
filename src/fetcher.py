@@ -25,13 +25,23 @@ from .config import (
 logger = logging.getLogger(__name__)
 
 
+SCRAPERAPI_BASE = "https://api.scraperapi.com"
+
+
 class BlinkitFetcher:
     """Fetches Blinkit category pages with proper session/headers."""
 
-    def __init__(self, lat: float, lon: float, delay: float = DEFAULT_DELAY):
+    def __init__(
+        self,
+        lat: float,
+        lon: float,
+        delay: float = DEFAULT_DELAY,
+        scraper_api_key: str | None = None,
+    ):
         self.lat = lat
         self.lon = lon
         self.delay = delay
+        self._scraper_api_key = scraper_api_key
         self.session = requests.Session()
         self._ua = UserAgent(fallback="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
         self._setup_session()
@@ -49,7 +59,7 @@ class BlinkitFetcher:
         # Visit homepage first to get session cookies
         try:
             logger.info("Visiting homepage to establish session...")
-            resp = self.session.get(BASE_URL, timeout=15)
+            resp = self.session.get(self._proxy_url(BASE_URL), timeout=30)
             resp.raise_for_status()
             logger.info(
                 "Session established. Cookies: %s",
@@ -63,6 +73,13 @@ class BlinkitFetcher:
         elapsed = time.time() - self._last_request_time
         if elapsed < self.delay:
             time.sleep(self.delay - elapsed)
+
+    def _proxy_url(self, url: str) -> str:
+        """Wrap a URL through ScraperAPI if a key is configured."""
+        if self._scraper_api_key:
+            from urllib.parse import quote
+            return f"{SCRAPERAPI_BASE}?api_key={self._scraper_api_key}&url={quote(url, safe='')}"
+        return url
 
     @retry(
         retry=retry_if_exception_type((requests.ConnectionError, requests.Timeout)),
@@ -78,7 +95,7 @@ class BlinkitFetcher:
         self.session.headers["User-Agent"] = self._ua.random
 
         self._last_request_time = time.time()
-        response = self.session.get(url, timeout=20)
+        response = self.session.get(self._proxy_url(url), timeout=60)
         return response
 
     def fetch_category(self, category: Category) -> str | None:
@@ -148,7 +165,7 @@ class BlinkitFetcher:
             api_headers["Referer"] = referer
 
         try:
-            response = self.session.post(url, headers=api_headers, timeout=20)
+            response = self.session.post(self._proxy_url(url), headers=api_headers, timeout=60)
             if response.status_code == 200:
                 return response.text
             else:

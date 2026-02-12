@@ -25,6 +25,9 @@ from src.parser import (
 
 MAX_PAGES_PER_CATEGORY = 20
 
+# ScraperAPI key from Streamlit secrets (invisible to end users)
+_SCRAPER_API_KEY = st.secrets.get("SCRAPER_API_KEY", None)
+
 # Regex patterns for Google Maps URLs:
 #   https://www.google.com/maps/@19.033,73.029,15z
 #   https://www.google.com/maps/place/.../@19.033,73.029,15z/...
@@ -124,7 +127,7 @@ if run_clicked:
     status = st.status("Initializing...", expanded=True)
 
     try:
-        with BlinkitFetcher(lat, lon, delay=delay) as fetcher:
+        with BlinkitFetcher(lat, lon, delay=delay, scraper_api_key=_SCRAPER_API_KEY) as fetcher:
             for i, category in enumerate(categories):
                 pct = (i + 1) / total
                 progress_bar.progress(pct, text=f"Category {i + 1}/{total}")
